@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    
+    <p>
+        I love music! It is the main thing keeping me going in life. It's my escape from reality.
+    </p>
+    <p>
+        I love a wide variety of music. 
+        I mainly listen to alternative rock, but I'll listen to more chill/sad rock at times. 
+        Sometimes I listen to Krushclub and Scenecore type music.
+        It really just depends on my mood. Lol
+    </p>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, midnightblue, #82c4f7);
+            color: white;
+            margin: 0;
+            height: 100vh;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label, input, textarea, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Music Form</h1>
+    <form id="sampleForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="favoriteGenre">Favorite Music Genre:</label>
+        <select id="favoriteGenre" name="favoriteGenre">
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="jazz">Jazz</option>
+            <option value="classical">Classical</option>
+            <option value="other">Other</option>
+        </select>
+        
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('sampleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const favoriteGenre = document.getElementById('favoriteGenre').value;
+            const comments = document.getElementById('comments').value;
+            
+            document.getElementById('result').innerHTML = `
+                <h2>Form Data Received:</h2>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Favorite Music Genre:</strong> ${favoriteGenre}</p>
+                <p><strong>Comments:</strong> ${comments}</p>
+            `;
+        });
+    </script>
+</body>
+</html>

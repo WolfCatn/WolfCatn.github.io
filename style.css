@@ -1,0 +1,62 @@
+h1, h2, h3, h4 {
+    color:plum;
+}
+h1 {
+  font-style: italic;
+}
+h6 {
+  color: midnightblue;
+}
+
+p {
+    color: lightskyblue;
+}
+
+a:link {
+    color: lightgreen;
+
+    }    
+  a:visited {
+    color: limegreen;
+  }
+
+li, dd {
+    color: lightblue;
+}
+
+p.double {border-style: double;
+border-color: whitesmoke;}
+
+.grid-container { 
+  display: grid; grid-template-areas: 
+  "header header" "sidebar main" "footer footer"; 
+  grid-template-columns: 1fr 3fr; 
+  grid-template-rows: auto 1fr auto; 
+  gap: 10px; 
+  height: 100vh; 
+} 
+
+.header { 
+  grid-area: header;
+  background-color: #02053a; 
+  padding: 20px; color: white; 
+} 
+
+.sidebar { 
+  grid-area: sidebar; 
+  background-color: #060e81; 
+  padding: 20px; 
+} 
+
+.main { 
+  grid-area: main; 
+  background-color: #060e81; 
+  padding: 20px; 
+} 
+
+.footer { 
+  grid-area: footer; 
+  background-color: #02053a; 
+  padding: 20px; 
+  color: white;
+}
